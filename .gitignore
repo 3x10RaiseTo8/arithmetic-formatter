@@ -1,6 +1,2 @@
-.replit
 __pycache__
-.toml
 .env
-test_module.py
-pyproject.toml
