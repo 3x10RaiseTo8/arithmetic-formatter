@@ -4,7 +4,6 @@ import re
 def arithmetic_arranger(problems, answer=False):
 
     # Error checking
-
     if len(problems) < 1:
         return 'Error: No problem found'
     if len(problems) > 5:
@@ -15,7 +14,7 @@ def arithmetic_arranger(problems, answer=False):
         matchtest1 = re.fullmatch('\s*.+\s*\+\s*.+\s*', item)
         matchtest2 = re.fullmatch('\s*.+\s*-\s*.+\s*', item)
 
-        if matchtest1 != None or matchtest2 != None:
+        if not matchtest1 or not matchtest2:
             pass
         else:
             return "Error: Operator must be '+' or '-'."
@@ -38,7 +37,6 @@ def arithmetic_arranger(problems, answer=False):
                     return 'Error: Numbers cannot be more than four digits.'
 
     # Formatting starts from here
-
     firstproblem = True
     for question in problems:
         if '+' in question:
